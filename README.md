@@ -1,12 +1,22 @@
 # DPN — Gemini & Antigravity
 
-Smart-routing lists for DPN: routes only Google Gemini / Antigravity traffic through the tunnel (fixes `400: User location is not supported`), everything else stays direct.
+| Domain | For |
+|---|---|
+| gemini.google.com | Gemini |
+| aistudio.google.com | Gemini |
+| ai.google.dev | Gemini |
+| alkalimakersuite-pa.clients6.google.com | Gemini |
+| push.clients6.google.com | Gemini |
+| lh3.googleusercontent.com | Gemini |
+| generativelanguage.googleapis.com | Gemini + Antigravity |
+| cloudcode-pa.googleapis.com | Antigravity |
+| daily-cloudcode-pa.googleapis.com | Antigravity |
+| antigravity.google | Antigravity |
+| antigravity-unleash.goog | Antigravity |
+| accounts.google.com | Both (login) |
+| oauth2.googleapis.com | Both (login) |
+| storage.googleapis.com | Both |
+| www.gstatic.com | Both |
+| ssl.gstatic.com | Both |
 
-| File | Records | Purpose |
-|---|---|---|
-| `smartDomain.csv` | 16 | Gemini web/AI Studio, Antigravity endpoints, Google auth |
-| `smartIp.csv` | 50 | IPv4 backup for the Antigravity language server |
-
-Format: `value,EUW,ANY,EUW` — change `EUW` if your DPN region differs.
-
-Import both files, apply, fully restart the Antigravity app.
+Format: `domain,EUW,ANY,EUW`. Import `smartDomain.csv` + `smartIp.csv`, apply, restart Antigravity.
